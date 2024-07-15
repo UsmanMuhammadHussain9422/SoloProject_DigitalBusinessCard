@@ -41,7 +41,7 @@ div.button--container {
     margin: 15px 35px 0px 35px;
 }
 
-div.button--container > button {
+div.button--container>button {
     font-family: Inter, sans-serif;
     display: flex;
     flex: 2;
@@ -51,6 +51,10 @@ div.button--container > button {
     justify-content: center;
     column-gap: 9px;
     border-radius: 6px;
+    border-style: none;
+    transition: background 0.3s, transform 0.1s, filter 0.1s;
+    cursor: pointer;
+    /* Change the mouse pointer on hover */
 }
 
 button.email {
@@ -59,6 +63,19 @@ button.email {
 
 button.linkedin {
     background: #5093E2;
+}
+
+button:active {
+    /* Darken the button background on click */
+    filter: brightness(0.8);
+    /* Slightly reduce the button size on click */
+    transform: scale(0.98);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3% rgba(66, 153, 225, 0.6);
+    /* Add a focus ring for accessibility */
 }
 
 .name {
@@ -81,6 +98,7 @@ button.linkedin {
     font-family: Inter;
     font-size: 10.24px;
 }
+
 /*Info-End*/
 
 /*About/Interest-Start*/
@@ -92,6 +110,7 @@ div.about--interest {
     justify-content: flex-start;
     margin: 0px 35px 24px 35px;
 }
+
 .h2--about-interest {
     font-family: Inter;
     font-size: 16px;
@@ -99,6 +118,7 @@ div.about--interest {
     line-height: 24px;
     text-align: left;
 }
+
 .p--about-interest {
     font-family: Inter;
     font-size: 10.24px;
@@ -106,6 +126,7 @@ div.about--interest {
     line-height: 15.36px;
     text-align: left;
 }
+
 /*About/Interest-End*/
 
 /*Footer-Start*/
@@ -120,12 +141,15 @@ div.footer {
     column-gap: 23px;
 }
 
-div.footer > button {
+div.footer>button {
     flex: 1;
     padding: 0px;
     margin: 0px;
     background: transparent;
     border-width: 0px;
     outline-width: 0px;
+    transition: background 0.3s, transform 0.1s, filter 0.1s;
+    cursor: pointer;
 }
+
 /*Footer-End*/
