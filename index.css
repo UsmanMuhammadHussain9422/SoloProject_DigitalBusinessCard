@@ -1,23 +1,45 @@
 * {
     text-align: center;
     color: white;
+
 }
 
+html,
 body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-items: center;
-    margin: 0px;
-    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    background: #23252C;
+    border-color: red;
+    border-width: 3px;
+    overflow-x: hidden;
 }
 
 div.main--container {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    align-items: center;
     min-width: fit-content;
-    height: fit-content;
-    background: #23252C;
+    min-height: fit-content;
+    overflow: auto;
+    border-radius: 15px;
+    width: 100vw;
+    height: 100vh;
     padding: 44px 116px 44px 116px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:hover {
+    filter: brightness(0.8);
+    /* transition: background 0.3s, transform 0.1s, filter 0.1s; */
+    cursor: pointer;
 }
 
 /*Info-Start*/
@@ -52,8 +74,6 @@ div.button--container>button {
     column-gap: 9px;
     border-radius: 6px;
     border-style: none;
-    transition: background 0.3s, transform 0.1s, filter 0.1s;
-    cursor: pointer;
     /* Change the mouse pointer on hover */
 }
 
@@ -63,19 +83,6 @@ button.email {
 
 button.linkedin {
     background: #5093E2;
-}
-
-button:active {
-    /* Darken the button background on click */
-    filter: brightness(0.8);
-    /* Slightly reduce the button size on click */
-    transform: scale(0.98);
-}
-
-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3% rgba(66, 153, 225, 0.6);
-    /* Add a focus ring for accessibility */
 }
 
 .name {
@@ -148,8 +155,6 @@ div.footer>button {
     background: transparent;
     border-width: 0px;
     outline-width: 0px;
-    transition: background 0.3s, transform 0.1s, filter 0.1s;
-    cursor: pointer;
 }
 
 /*Footer-End*/
